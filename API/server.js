@@ -47,6 +47,6 @@ mongoose
   .then(() => console.log("MongoDB connected successfully..."))
   .catch((error) => console.log(error));
 
-const port = 8080; // Define the port variable
+const port = process.env.PORT || 8080; // Define the port variable
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
